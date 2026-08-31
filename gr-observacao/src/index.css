@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+/* Regras que o Tailwind não cobre bem dentro de SVG: o realce ao passar o
+   dedo/rato pelas zonas das grelhas. As cores de seleção vivem no próprio
+   componente GrelhaZonas (fill calculado), aqui só o feedback de hover. */
+.zona-clicavel {
+  cursor: pointer;
+}
+.zona-clicavel:hover {
+  filter: brightness(1.15);
+}
+
+/* Em uso com dedos não queremos seleção acidental de texto nos botões. */
+button {
+  user-select: none;
+  -webkit-user-select: none;
+}
